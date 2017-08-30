@@ -17,7 +17,7 @@ class CreateCommentsTable extends Migration
         	$table->increments("id");
         	$table->unsignedInteger("commentEmojiId");
         	$table->string("commentContent");
-        	$table->foreign("commentEmojiId")->references("emoji")->on("id");
+        	$table->foreign("commentEmojiId")->references("id")->on("emoji");
 		  });
     }
 
